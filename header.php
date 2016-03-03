@@ -28,6 +28,7 @@
         'menu_class' => 'header__navContainer clearfix',
         'theme_location' => 'header_nav'
       )); ?>
+      <?php dynamic_sidebar( 'nav-search' ); ?>
     </nav>
   </div> <!-- /.container -->
 </header><!--/.header-->

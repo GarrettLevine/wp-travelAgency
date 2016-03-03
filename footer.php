@@ -1,6 +1,6 @@
-<footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+<footer class="footer">
+  <div class="footer__wrapper">
+  	<h3><?php bloginfo('name') ?></h2>
   </div>
 </footer>
 

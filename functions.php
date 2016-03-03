@@ -177,6 +177,25 @@ function hackeryou_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 
+	register_sidebar( array(
+		'name' => 'Hero Text',
+		'id' => 'hero-text',
+		'description' => 'text for the hero image',
+		'before_widget' => '<h2>',
+		'after_widget' => '</h2>'
+	));
+
+	register_sidebar( array(
+		'name' => 'Nav Search',
+		'id' => 'nav-search',
+		'description' => 'search in header nav',
+	));
+
+	register_sidebar( array(
+		'name' => 'Footer Widget',
+		'id' => 'footer-menu',
+		'description' => 'footer widget'
+		)); 
 }
 
 add_action( 'widgets_init', 'hackeryou_widgets_init' );
@@ -284,4 +303,13 @@ function hackeryou_get_thumbnail_url( $post ) {
 	$imageID = get_post_thumbnail_id($post->ID);
 	$imageURL = wp_get_attachment_url($imageID);
 	return $imageURL;
+}
+
+/* hackeryou_get_the_content_by_id: return the content from the specified post ID */
+function hackeryou_get_the_content_by_id($post_id) {
+  $page_data = get_page($post_id);
+  if ($page_data) {
+    return $page_data->post_content;
+  }
+  else return false;
 }

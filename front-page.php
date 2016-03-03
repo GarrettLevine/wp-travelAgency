@@ -6,7 +6,7 @@
 			
 			<div class="heroImage__heroText">
 				<h6><?php bloginfo("description"); ?></h6>
-				<h2>Go boldly, venture forth</h2>
+				<?php dynamic_sidebar( 'hero-text' ); ?>
 				
 			</div>			
 			<div class="heroImage__heroVideo">
@@ -16,7 +16,8 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In deserunt nesciunt magni.</p>
 			</div>
   </div> <!-- /.container -->
-</div> <!-- /.heroImage -->
+</div> <!-- /.wrapper -->
+</div>
 
  <div class="">
  		

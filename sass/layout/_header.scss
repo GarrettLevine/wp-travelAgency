@@ -1,5 +1,4 @@
 .header {
-	padding: 1rem 0;
 	border-bottom: 1px solid transparentize($white, 0.7);
 	&__wrapper {
 		@include outer-container($max-width--desktop);
@@ -19,23 +18,92 @@
 				text-transform: uppercase;
 			}
 	}
-
+	
+	//container for the header navigations/search button
 	&__nav {
-		@include shift(3);
-		@include span-columns(5);
-		margin-top: 1rem;
+		@include shift(2);
+		@include span-columns(6);
+		display: flex;
+		
 	}
-
+	//container for the nav links
 	&__navContainer {
+		width: 70%; 
+		margin-bottom: 0;
 		li {
 			float:left;
 			width: 33.33%;
 			font-size: 1.1rem;
 			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			a {
 				font-family: $font-family--body;
 				color: $white;
+				display: block;
+				padding: 1rem;
+
 			}
 		}
 	}
+
+	//header search form styling
+	form {
+		width: 30%;
+		position: relative;
+		margin: 0;
+		&:hover > input[type="search"] {
+			display: block;
+		}
+		//magnifying glass icon
+		&::after {
+			//image courtesy of Travis Yunis from the Noun Project
+			content: url(images/magnifyingGlass.svg);
+			display: block;
+			position: absolute;
+			@include size(2.5rem);
+			left: 50%;
+			top: 50%;
+			transform: translate(30%, -50%);
+		}
+		//search area
+		input[type="search"] {
+			background: $white;
+			position: absolute;
+			display: none;
+			font-size: 1.6rem;
+			padding: 2rem;
+			bottom:-8rem;
+			right:-4.2rem;
+			border: 1rem solid $black;
+			font-family: $font-family--body;
+			transition: all 1s;
+
+			&:hover {
+				display: block;
+			}
+
+			&:focus {
+				display: block;
+				outline: none;
+			}
+
+		} // ./search
+
+	//styling for the search button
+		input[type="submit"] {
+			background: transparent;
+			border: 1px solid transparentize($white, 0.7);
+			border-bottom: none;
+			border-top: none;
+			color: transparent;
+			position: relative;
+			@include size(6rem 4.5rem);	
+			&:focus {
+				outline: none;
+			}
+		} // ./submit
+	} // ./form
+	
 }
