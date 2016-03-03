@@ -1,0 +1,41 @@
+.header {
+	padding: 1rem 0;
+	border-bottom: 1px solid transparentize($white, 0.7);
+	&__wrapper {
+		@include outer-container($max-width--desktop);
+	}
+
+	&__logo {
+		padding-left: 1rem;
+			@include span-columns(4);
+			h1 {
+				margin: 1rem 0 0 0;
+				letter-spacing: 0.46rem;
+				color: $white;
+				font-family: $font-family--header;
+			}
+			a {
+				font-size: 2rem;
+				text-transform: uppercase;
+			}
+	}
+
+	&__nav {
+		@include shift(3);
+		@include span-columns(5);
+		margin-top: 1rem;
+	}
+
+	&__navContainer {
+		li {
+			float:left;
+			width: 33.33%;
+			font-size: 1.1rem;
+			text-transform: uppercase;
+			a {
+				font-family: $font-family--body;
+				color: $white;
+			}
+		}
+	}
+}

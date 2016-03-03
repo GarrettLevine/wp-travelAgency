@@ -1,0 +1,82 @@
+.heroImage {
+		background-size: cover;
+		background-position: center;
+
+		&__wrapper {
+			height: 65vh;
+			@include outer-container($max-width--desktop);
+		}
+
+		&__heroText {
+			margin-top: 15%;
+			h6 {
+				margin: 0;
+				
+				text-transform: uppercase;
+				color:$white;
+				letter-spacing: 0.2rem;
+				font-family: $font-family--subtitle;
+				font-weight: 700;
+				opacity: 0.9;
+			}
+
+			h2 {
+				font-family: $font-family--cursive;
+				color: $white;
+				font-size: 6.5rem;
+				letter-spacing: 0.6rem;
+				width: 50%;
+				margin: 1rem 0 0 0;
+				text-transform: capitalize;
+			}
+		} // /.heroText
+		&__heroVideo {
+			display: flex;
+
+		}
+		//PLAY BUTTON
+		&__playButton {
+			@include size(8rem);
+			background: transparent;
+			border: 2px solid $white;
+			border-radius: 50%;
+			transition: all  0.5s;
+			position: relative;
+			//triangle in the button
+			&::before {
+				content: "";
+				display: block;
+
+				@include position(absolute, 50% 50% null null);
+				transform: translate(50%, -50%);
+
+				width: 0; 
+				height: 0; 
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+				border-left: 20px solid $white;
+			}
+			&:hover {
+				transform: scale(0.95);
+				background: transparentize($white, 0.9);
+			}
+
+		} // /.playButton
+		&__videoDescription {
+
+			p {
+				width: 41.5rem;
+				padding-left: 2.5rem;
+				font-size: 1.6rem;
+				font-weight: 400;
+				color: $white;
+
+				line-height: 2;
+				margin: 0.5rem 0;
+			}
+		}
+
+
+
+
+}
