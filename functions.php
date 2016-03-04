@@ -197,7 +197,15 @@ function hackeryou_widgets_init() {
 		'description' => 'footer widget',
 		'before_title' => '<h6 class="footer__areaTitle">',
 		'after_title' => '</h6>'
-		)); 
+		));
+
+	register_sidebar( array(
+		'name' => 'Instagram Feed',
+		'id' => 'instagram-feed',
+		'description' => 'instagram feed for the front page',
+		'before_title' => '<h6 class="instagramArea__instagramHeader">',
+		'after_title' => '</h6>'
+	));
 }
 
 add_action( 'widgets_init', 'hackeryou_widgets_init' );

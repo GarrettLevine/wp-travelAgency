@@ -13,13 +13,43 @@
 				<button class="heroImage__playButton">
 				</button>
 			<div class="heroImage__videoDescription">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In deserunt nesciunt magni.</p>
+					<p><?php the_field('video_description'); ?></p>
 			</div>
   </div> <!-- /.container -->
 </div> <!-- /.wrapper -->
 </div>
 
- <div class="">
- 		
- </div> <!--/.content -->
+ <div class="quoteArea">	
+		<div class="quoteArea__wrapper">
+	 	<div class="quoteArea__textContainer">
+	 		<h2 class="quoteArea__heading"><?php the_field('about_header'); ?></h2>
+	 		<p class="quoteArea__text"><?php the_field('about_text'); ?></p>
+	 	</div>
+	 	<div class="quoteArea__imageContainer">
+		 	<?php 
+		 		$signatureImage = get_field('about_signature');
+		 		if( !empty($signatureImage) ): ?>
+		 		<img src="<?php echo $signatureImage['url']; ?>" alt="<?php echo $signatureImage['alt']; ?>" />
+					<?php endif; ?>
+	 	</div>
+	 </div> <!--/.wrapper -->
+ </div><!--/.quoteArea -->
+ <div class="instagramArea">
+ 	<div class="instagramArea__wrapper">
+ 		<div class="instagramArea__textContainer">
+ 			<h2><?php the_field('instagram_hashtag') ?></h2>
+ 			<h4><?php the_field('instagram_subtitle') ?></h4>
+ 			<p><?php the_field('instagram_description') ?></p>
+ 		</div> <!-- ./textContainer -->
+ 		<div class="instagramArea__instagramFeedContainer">
+ 		<?php echo wdi_feed(array('id'=>'1')); ?>
+ 		</div>
+ 	</div> <!-- ./wrapper -->
+ </div> <!-- ./instagramArea -->
+ <div class="blogArea">
+		<div class="blogArea__titleContainer">
+			<h6 class="blogArea__header">popular foundry tours</h6>
+		</div>
+			<?php get_template_part( 'loop', 'travel' );	?>
+ </div>
 <?php get_footer(); ?>

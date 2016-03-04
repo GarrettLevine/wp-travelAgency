@@ -1,0 +1,35 @@
+//************************************************************************
+//									BLOG AREA STYLING
+//************************************************************************
+.blogArea {
+	background-color: $white;
+	&__header {
+		text-transform: uppercase;
+		font-family: $font-family--header;
+		letter-spacing: 0.3rem;
+		text-align: center;
+	}
+	&__blogPost {
+		padding: 25rem 0;
+		background-size: cover;
+		background-position: fixed;
+		
+	}
+
+}
+.blogPost {
+	&__textContainer {
+		margin: auto;
+		width: 50%;
+		text-align: center;
+	}
+	&__heading {
+		font-size: 4.5rem;
+		color: $white;
+		margin: 0.5;
+		text-transform: uppercase;
+		font-family: $font-family--subtitle;
+		font-weight: 400;
+		letter-spacing: 0.3rem;
+	}
+}

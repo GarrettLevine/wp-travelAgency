@@ -1,0 +1,36 @@
+//************************************************************************
+//									FRONT PAGE QUOTE AREA
+//************************************************************************
+.quoteArea {
+	padding: 5rem 0;
+
+	&__wrapper {
+		@include outer-container($max-width--desktop);
+		text-align: center;
+	}
+
+	&__heading {
+		font-family: $font-family--subtitle;
+		letter-spacing: 0.8rem;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	&__text {
+		width: 60%;
+		margin: auto;
+		font-size: 1.6rem;
+		line-height: 2;
+		opacity: 0.8;
+	}
+
+	//image container for the quote
+	&__imageContainer {
+		width: 20%;
+		margin: auto;
+		margin-top: 5rem;
+		img {
+			width: 100%;
+		}
+	}
+}

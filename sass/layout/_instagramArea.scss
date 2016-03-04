@@ -1,0 +1,54 @@
+//************************************************************************
+//									INSTAGRAM FEED AREA
+//************************************************************************
+.instagramArea {
+	background-color: $tertiary-color;
+
+	&__wrapper {
+		@include outer-container($max-width--desktop);
+	}
+	&__textContainer {
+		@include span-columns(6);
+		text-align: center;
+		padding: 15rem 0;
+		h2 {
+			font-family: $font-family--subtitle;
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: 4.3rem;
+			margin: 0;
+			letter-spacing: 1rem;
+		}
+		h4 {
+			font-family: $font-family--header;
+			text-transform: uppercase;
+			font-size: 1rem;
+			font-weight: 700;
+			letter-spacing: 0.1rem;
+			margin-bottom: 1.5rem;
+		}
+		p {
+			font-size: 1.6rem;
+			opacity: 0.87;
+			width: 75%;
+			margin: auto;
+			line-height: 2;
+		}
+	}
+	&__instagramFeedContainer {
+		@include span-columns(6);
+	.wdi_feed_container {
+		background-color: $tertiary-color;
+		padding: 1rem;
+	}
+	.wdi_pagination_container {
+		display: none;
+	}
+	.wdi_feed_users {
+		display: none;
+	}
+	.wdi_feed_wrapper {
+		background-color: $tertiary-color;
+	}
+	} // ./instagramFeedContainer
+}
