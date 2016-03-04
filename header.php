@@ -5,6 +5,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php  wp_title('|', true, 'right'); ?></title>
+
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <!-- stylesheets should be enqueued in functions.php -->
   <?php wp_head(); ?>
@@ -13,7 +14,7 @@
 
 <body <?php body_class(); ?>>
 
-<header class="header">
+<header id="header" class="header">
   <div class="header__wrapper">
     <div class="header__logo">
       <h1 class="header__logo">

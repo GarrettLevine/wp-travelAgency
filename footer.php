@@ -1,7 +1,22 @@
 <footer class="footer">
   <div class="footer__wrapper">
-  	<h3><?php bloginfo('name') ?></h2>
+	  <ul class="footer__areaContainer">
+	  	<li class="footer__logoContainer"> <h3 class="footer__logo"><?php bloginfo('name') ?></h3> </li>
+	  	<?php dynamic_sidebar('footer-menu') ?>
+	  </ul>
   </div>
+  <div class="footer__subFooterContainer">
+  	<p class="footer__copyright"> Copyright <?php echo date('Y')?> - <?php echo bloginfo("title")?></p>
+
+	  <div class="footer__mediaContainer">
+	  	<?php wp_nav_menu( array(
+        'container' => 'false',
+        'menu_class' => 'footer__socialNavContainer clearfix',
+        'theme_location' => 'footer_social_nav'
+      )); ?>
+	  </div>
+  </div>
+	  <a href="#header" class="footer__linkToTop">Top</a>
 </footer>
 
 <script>

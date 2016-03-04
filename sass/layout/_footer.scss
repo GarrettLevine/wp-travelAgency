@@ -1,0 +1,158 @@
+.footer {
+	background-color: $bokuraGrey;
+	padding: 7.2rem 0;
+	&__wrapper {
+		@include outer-container($max-width--desktop);
+		h3 {
+			color: $white;
+			font-family: $font-family--body;
+			margin-top: 0;
+		}
+
+		h6 {
+			color: $white;
+			font-family: $font-family--body;
+			font-size: 1.4rem;
+			letter-spacing: 0.2rem;
+			margin: 0;
+			padding-bottom: 1rem;
+			border-bottom: 2px solid $border-grey;
+			text-transform: uppercase;
+		}
+
+	} // ./wrapper
+
+	&__areaContainer {
+		margin:0;
+		padding: 0;
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		.widget {
+			@include span-columns(3);
+		}
+	}
+	&__logoContainer {
+		@include span-columns(3);
+	}
+	&__footer {
+
+	}
+	.widget_recent_entries {
+		ul {
+			display: flex;
+			flex-direction: column;
+			li {
+				a {
+					width: 100%;
+					display: inline-block;
+					margin-top: 1rem;
+					position: relative;
+
+					color: $white;
+					line-height: 1.7;
+					font-size: 1.6rem;
+					font-weight: 400;
+					font-family: $font-family--body;
+
+					&:hover,
+					&:hover + .post-date {
+						background-color: $border-grey;
+					}
+
+					&::after {
+						//image courtesy of Lipi from The Noune Project
+						content: url(./images/arrowRight.svg);
+						display: inline-block;
+						@include size(1.5rem);
+						@include position(absolute, 0.5rem 0 null null);
+
+					}
+				}
+			}
+			.post-date {
+				color: $white;
+				font-family: $font-family--body;
+				font-size: 1.4rem;
+				opacity: 0.8;
+				display: block;
+			}
+		} // ./widget-recent-entries ul
+	} // ./widget-recent-entries
+
+	&__subFooterContainer {
+		max-width: $max-width--desktop;
+		margin: auto;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	//media button styles
+
+	&__socialNavContainer {
+		display: flex;
+		width: 25%;
+	a {
+		font-size: 1.8rem;
+		margin-left: 1rem;
+	}
+	}
+	&__mediaButton {
+		&--twitter{
+			@extend %footer-media-buttons;
+			transition: all 0.5s;
+			&:hover {
+				color: $white;
+			}
+		}
+		&--facebook {
+			@extend %footer-media-buttons;
+			transition: all 0.5s;
+			&:hover {
+				color: $white;
+			}		
+		}
+		&--yelp {
+			@extend %footer-media-buttons;
+			transition: all 0.5s;
+			&:hover {
+				color: $white;
+			}
+		}
+		&--instagram {
+			@extend %footer-media-buttons;
+			transition: all 0.5s;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+	&__linkToTop {
+		display: inline-block;
+		padding: 1rem 2.5rem;
+		text-align: center;
+		font-size: 1.4rem;
+		font-size: $font-family--body;
+		color: $border-grey;
+		border: 2px solid $border-grey;
+		border-radius: 0.2rem;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: all 0.5s;
+		&:visited {
+			color: $border-grey;
+		}
+		&:hover {
+			background-color: $border-grey;
+			border-color: $white;
+			color: $white;
+		}
+	}
+	&__copyright {
+		color: $border-grey;
+		font-size: 1.5rem;
+	}
+}

@@ -1,11 +1,10 @@
 .header {
-	border-bottom: 1px solid transparentize($white, 0.7);
+	border-bottom: 1px solid $border-grey;
 	&__wrapper {
 		@include outer-container($max-width--desktop);
 	}
 
 	&__logo {
-		padding-left: 1rem;
 			@include span-columns(4);
 			h1 {
 				margin: 1rem 0 0 0;
@@ -24,7 +23,7 @@
 		@include shift(2);
 		@include span-columns(6);
 		display: flex;
-		
+		justify-content: space-between;
 	}
 	//container for the nav links
 	&__navContainer {
@@ -94,7 +93,7 @@
 	//styling for the search button
 		input[type="submit"] {
 			background: transparent;
-			border: 1px solid transparentize($white, 0.7);
+			border: 1px solid $border-grey;
 			border-bottom: none;
 			border-top: none;
 			color: transparent;

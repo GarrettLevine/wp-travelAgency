@@ -33,6 +33,8 @@ $font-family--subtitle: 'Oswald', sans-serif;
 // DESCRIPTIVE BASE COLORS
 //==================================
 
+$bokuraGrey  : #292929;
+
 
 //==================================
 // COLOR USAGE
@@ -41,6 +43,8 @@ $white       : #FFF;
 $black       : #000;
 $grey        : #616161; 
 
+$secondary-color: $bokuraGrey;
+$border-grey: transparentize($white, 0.8);
 
 // Text
 

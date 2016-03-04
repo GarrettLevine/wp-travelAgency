@@ -24,7 +24,7 @@ function theme_setup() {
 	register_nav_menus( array(
 		'primary' => 'Primary Navigation',
 		'header_nav' => 'Header Navigation',
-		'footer_nav' => 'Footer Navigation'
+		'footer_social_nav' => 'Footer Social Nav'
 	) );
 
 	/*
@@ -194,7 +194,9 @@ function hackeryou_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Footer Widget',
 		'id' => 'footer-menu',
-		'description' => 'footer widget'
+		'description' => 'footer widget',
+		'before_title' => '<h6 class="footer__areaTitle">',
+		'after_title' => '</h6>'
 		)); 
 }
 
