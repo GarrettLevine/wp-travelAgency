@@ -28,10 +28,10 @@
 	//container for the nav links
 	&__navContainer {
 		width: 70%; 
-		margin-bottom: 0;
+		margin: 0;
 		li {
 			float:left;
-			width: 33.33%;
+			width: 50%;
 			font-size: 1.1rem;
 			text-transform: uppercase;
 			display: flex;
@@ -41,8 +41,10 @@
 				font-family: $font-family--body;
 				color: $white;
 				display: block;
-				padding: 1rem;
-
+				padding: 1.5rem;
+				&:hover {
+					background-color: transparentize($white, 0.7);
+				}
 			}
 		}
 	}
@@ -104,5 +106,21 @@
 			}
 		} // ./submit
 	} // ./form
-	
+}
+
+.insideHeader {
+	background-color: $white;
+	border-bottom: 2px solid $secondary-color;
+}
+
+.insideLogo a,
+.insideNav .header__navContainer a {
+	color: $secondary-color;
+	&:hover {
+		color: $blog-highlight;
+	}
+}
+.insideNav form,
+.insideNav form input[type="submit"] {
+	background-color: $secondary-color;
 }

@@ -84,8 +84,8 @@ function hackeryou_scripts() {
   );
 
   wp_enqueue_script(
-    'parallax', //handle
-    'https://rawgithub.com/pederan/Parallax-ImageScroll/master/jquery.imageScroll.min.js', //source
+    'stellar', //handle
+    get_template_directory_uri() . '/js/jquery.stellar.js', //source
     array( 'jquery', 'plugins' ), //dependencies
     null, // version number
     true //load in footer
@@ -144,7 +144,7 @@ add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return ' <div><a href="'. get_permalink() . '">Read More</a></div>';
 }
 
 /**

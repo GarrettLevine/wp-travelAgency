@@ -18,7 +18,9 @@
   </div> <!-- /.container -->
 </div> <!-- /.wrapper -->
 </div>
-
+  	<!-- **********************************************
+  								Quote Area
+  		************************************************-->
  <div class="quoteArea">	
 		<div class="quoteArea__wrapper">
 	 	<div class="quoteArea__textContainer">
@@ -46,10 +48,23 @@
  		</div>
  	</div> <!-- ./wrapper -->
  </div> <!-- ./instagramArea -->
+  	<!-- **********************************************
+  								BLOG AREA
+  		************************************************-->
  <div class="blogArea">
 		<div class="blogArea__titleContainer">
 			<h6 class="blogArea__header">popular foundry tours</h6>
 		</div>
 			<?php get_template_part( 'loop', 'travel' );	?>
  </div>
+  	<!-- **********************************************
+ 								NEWSLETTER AREA
+ 		************************************************-->
+ <div class="newsletterArea">
+ 	<div class="newsletterArea__wrapper">
+			<h2 class="newsletterArea__heading"><?php the_field('newsletter_heading') ?></h2>
+			<h4 class="newsletterArea__subheading"> <?php the_field('newsletter_subheading') ?></h4>
+			<?php the_field("newsletter_form"); ?>
+ 	</div> <!--./wrapper -->
+ </div> <!-- ./newsletter area -->
 <?php get_footer(); ?>

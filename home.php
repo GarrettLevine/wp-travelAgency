@@ -1,15 +1,9 @@
 <?php //index.php is the last resort template, if no other templates match ?>
 
 <div class="blogMain">
-<?php get_header(); ?>
+<?php include(TEMPLATEPATH . '/header-insidePages.php'); ?>
   <div class="blogMain__wrapper">
-
-    <div class="blogMain__content">
     		<?php get_template_part( 'loop', 'index' );	?>
-    </div> <!--/.content -->
-
-    <?php get_sidebar(); ?>
-
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 

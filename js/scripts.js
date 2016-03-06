@@ -1,7 +1,6 @@
 $(function(){
-
-	console.log("It's working");
-	$('.img-holder').imageScroll({
-	  imageAttribute: 'image'
+	$('.blogArea__blogPost').stellar({
+  horizontalOffset: 40,
+  verticalOffset: 150
 	});
 });

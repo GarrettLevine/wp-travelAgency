@@ -1,0 +1,104 @@
+.blogMain { 
+	&__wrapper {
+		@include outer-container($max-width--desktop);
+		margin-top: 6rem;
+		@include mq(medium) {
+			padding: 0 1rem;
+		}
+		@include mq(small) {
+			padding: 0 1rem;
+		}
+	}
+	&__blogPost {
+		margin: 5rem 0;
+	}
+	&__imageContainer {
+		max-height: 40rem;
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+	&__blogTypes,
+	&__blogStats {
+		display: flex;
+		align-items: center;
+	}
+	&__blogDate {
+		display: inline-block;
+		height: 3.5rem;
+		padding: 0.9rem;
+		font-size: 1.3rem;
+		background-color: $blog-highlight;
+		color: $white;
+	}
+
+	&__blogTitle {
+		font-family: $font-family--subtitle;
+		margin-left: 3rem;
+		font-weight: 300;
+		color: $grey;
+		&:hover {
+			color: $blog-highlight;
+		}
+		&:visited {
+			color: $blog-highlight;
+		}
+	}
+
+	&__blogTypes {
+		border-bottom: 1px solid lighten($grey, 25%);
+		ul {
+			padding-left: 0.7rem;
+			margin: 0;
+			text-transform: capitalize;
+		}
+		i {
+			font-size: 1.4rem;
+			color: $grey; 
+		}
+
+		p{
+			font-size: 1.4rem;
+			margin-left: 1.5rem;
+			color: $grey;
+		}
+
+		a {
+			font-size: 1.4rem;
+			color: $blog-highlight;
+			&:hover {
+				color: darken($blog-highlight, 15%);
+			}
+			&:visited {
+				color: $blog-highlight;
+			}
+		}
+	}
+	&__blogContent {
+		padding: 2rem 0;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+
+		p {
+			font-size: 1.6rem;
+			line-height: 1.5;
+			color: $grey;
+		}
+		div {
+			margin-top: 1.5rem;
+		}
+		a {
+			padding: 0.5rem 2rem;
+			border: 2px solid $blog-highlight;
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			color: $blog-highlight;
+			&:hover {
+				background-color: $blog-highlight;
+				color: $white;
+			}
+		}
+	}
+}

@@ -1,43 +1,38 @@
-<?php get_header(); ?>
 
-<div class="main">
-  <div class="container">
-    <div class="content">
+<div class="singlePost">
+<?php include(TEMPLATEPATH . '/header-insidePages.php'); ?>
+  <div class="singlePost__wrapper">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+        
+          <article class="blogMain__blogPost" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <div class="blogMain__imageContainer">
+              <img src="<?php echo hackeryou_get_thumbnail_url($post) ?>" />
+            </div>
+            <div class="blogMain__blogStats">
+              <p class="blogMain__blogDate"><?php the_date() ?></p>
+              <h2 class="blogMain__blogTitle">
+            <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+              <?php the_title(); ?>
+            </a>
+            </h2>
+            </div>
+            <div class="blogMain__blogTypes">
+              <i class="fa fa-user"></i>
+              <p class="blogMain__blogAuthoer">Written by <a href=""><?php the_author(); ?></a></p>
+              
+              <p class="blogMain__blogTag"><i class="fa fa-tag"></i><?php the_category(); ?></p>
+            </div>
 
-        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
-
-          <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
-          </div><!-- .entry-meta -->
-
-          <div class="entry-content">
+          <div class="singlePost__postContent">
             <?php the_content(); ?>
             <?php wp_link_pages(array(
               'before' => '<div class="page-link"> Pages: ',
               'after' => '</div>'
             )); ?>
           </div><!-- .entry-content -->
-
-          <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
-          </div><!-- .entry-utility -->
-        </div><!-- #post-## -->
-
-        <div id="nav-below" class="navigation">
-          <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
-          <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
-        </div><!-- #nav-below -->
-
         <?php comments_template( '', true ); ?>
 
       <?php endwhile; // end of the loop. ?>
-
-    </div> <!-- /.content -->
-
-    <?php get_sidebar(); ?>
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->

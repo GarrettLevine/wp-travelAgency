@@ -33,8 +33,11 @@ $font-family--subtitle: 'Oswald', sans-serif;
 // DESCRIPTIVE BASE COLORS
 //==================================
 
-$bokuraGrey  : #292929;
-$desertStorm : #F8F8F8;
+$bokuraGrey  					: #292929;
+$desertStorm 					: #F8F8F8;
+$avacado										: #969C5E;
+$lightForestGreen : #6AAD74;
+$concrete									: #666666;
 
 
 //==================================
@@ -44,9 +47,12 @@ $white       : #FFF;
 $black       : #000;
 $grey        : #616161; 
 
+$primary-color: $avacado;
 $secondary-color: $bokuraGrey;
 $tertiary-color : $desertStorm;
 $border-grey: transparentize($white, 0.8);
+$blog-highlight : $lightForestGreen;
+$blog-grey						: $concrete;
 
 // Text
 
@@ -86,7 +92,7 @@ $path--rel      : "../assets";
 
 //max-width
 $max-width--tablet		: 65rem;
-$max-width--desktop	: 118rem;
+$max-width--desktop	: 96rem;
 
 // Breakpoints
 

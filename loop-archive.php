@@ -16,28 +16,26 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-		<article class="blogMain__blogPost" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="blogMain__imageContainer">
-			<img src="<?php echo hackeryou_get_thumbnail_url($post) ?>" />
-		</div>
-		<div class="blogMain__blogStats">
-			<p class="blogMain__blogDate"><?php the_date() ?></p>
-			<h2 class="blogMain__blogTitle">
-    <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-      <?php the_title(); ?>
-    </a>
-  	</h2>
-		</div>
-		<div class="blogMain__blogTypes">
-			<i class="fa fa-user"></i>
-			<p class="blogMain__blogAuthoer">Written by <a href=""><?php the_author(); ?></a></p>
-			
-			<p class="blogMain__blogTag"><i class="fa fa-tag"></i><?php the_category(); ?></p>
-		</div>
-			<section class="blogMain__blogContent">
-				<?php the_excerpt('<div class="blogMain__readMore">Continue reading <span class="meta-nav">&rarr;</span></div>'); ?>
-				
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<h2 class="entry-title">
+        <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+          <?php the_title(); ?>
+        </a>
+      </h2>
+
+			<section class="entry-content">
+				<?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?>
+				<?php wp_link_pages( array(
+          'before' => '<div class="page-link"> Pages:',
+          'after' => '</div>'
+        )); ?>
 			</section><!-- .entry-content -->
+
+			<footer>
+				<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Posted in <?php the_category(', '); ?></p>
+        <p><?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
+        <p><?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
+			</footer>
 
 		</article><!-- #post-## -->
 

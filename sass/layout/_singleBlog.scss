@@ -1,0 +1,57 @@
+.singlePost {
+	&__wrapper {
+		margin-top: 5rem;
+		@include outer-container($max-width--desktop);
+
+		@include mq(small){
+			padding: 1rem;
+		}
+		@include mq(medium) {
+			padding: 1rem;
+		}
+	}
+	&__postContent {
+		color: $blog-grey;
+		font-size: 1.5rem;
+		letter-spacing: 0.1rem;
+		line-height: 1.5;
+		border-bottom: 1px solid $blog-grey;
+	}
+
+	blockquote {
+		background-color: $tertiary-color;
+		margin: 3rem 0;
+		padding: 2rem 1.75rem;
+		line-height: 2;
+		font-style: italic;
+		border-left: 3px solid darken($tertiary-color, 10%);
+		font-weight: 700;
+		letter-spacing: 0.1rem;
+	}
+
+	ul {
+		padding: 1.75rem;
+
+	}
+
+	li {
+		list-style-type: disc;
+	}
+}
+
+.comments-area {
+	h2 {
+		font-size: 1.8rem;
+		letter-spacing: 0.15rem;
+		font-weight: 300;
+		font-family: $font-family--body;
+		text-transform: uppercase;
+	}
+	.comment-author {
+		.avatar {
+			img {
+				@include size(7.5rem);
+			}
+	}
+	}
+}

@@ -1,0 +1,87 @@
+//************************************************************************
+//									newsLetter Area
+//************************************************************************
+.newsletterArea {
+	background-color: $white;
+	&__wrapper{
+		@include outer-container($max-width--desktop);
+		padding: 14rem 0;
+		text-align: center;
+	}
+	&__heading {
+		font-family: $font-family--cursive;
+		font-size: 7rem;
+		letter-spacing: 0.3rem;
+		font-weight: 300;
+		margin: 0;
+	}
+	&__subheading{
+		font-family: $font-family--subtitle;
+		font-size: 2rem;
+		text-transform: uppercase;
+		color: $secondary-color;
+	}
+	&__signupForm {
+		margin: auto;
+		margin-top: 5rem;
+		width: 60rem;
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+	&__emailLabel {
+		@include position(absolute, null null 2.25rem 6.5rem);
+		font-size: $font-family--body;
+		z-index: $z-index--1;
+		font-size: 2rem;
+		color: $primary-color;
+		display: none;
+		transition: all 2s;
+	}
+	&__emailInput {
+		width: 25rem;
+		font-size: 1.8rem;
+		padding: 2rem;
+		border: 3px solid $grey;
+		position: relative;
+		transition: all 0.5s;
+		@include placeholder() {
+			color: $primary-color;
+		}
+		//change the colour of the placeholdre text on focus
+		&:focus {
+			outline: none;
+			border: 3px solid $primary-color;
+			@include placeholder() {
+				color:transparent;
+			}
+		}
+		//make the label appear when focusing on the form
+		&:focus + label.newsletterArea__emailLabel {
+			display: block;
+			@include position(absolute, -3rem null null 4rem);
+		}
+	}
+	p {
+		display: inline-block;
+	}
+	.wpcf7-submit {
+		width: 25rem;
+		padding: 2.4rem;
+		margin-left: 2rem;
+		font-size: 1.5rem;
+		font-family: $font-family--subtitle;
+		text-transform: uppercase;
+
+		text-align: center;
+		color: $white;
+		background-color: $secondary-color;
+		border: none;
+		transition: all 0.5s;
+		cursor: pointer;
+		&:hover{
+			background-color: $primary-color;
+		}
+	}
+
+}
