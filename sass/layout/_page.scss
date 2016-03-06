@@ -1,0 +1,29 @@
+.page {
+	&__wrapper {
+		@include outer-container($max-width--desktop);
+	}
+	&__title {
+		color: $white;
+		font-size: 7rem;
+	}
+	&__imageWrapper {
+		padding: 13rem 0;
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: none;
+	}
+	&__headerWrappeR {
+	 @include outer-container($max-width--desktop);
+	}
+	p {
+		color: $blog-grey;
+		font-size: 1.6rem;
+		line-height: 1.7;
+	}
+
+	blockquote {
+		background-color: $tertiary-color;
+		padding: 1.5rem;
+		border-left: 3px solid darken($tertiary-color, 20%);
+	}
+}

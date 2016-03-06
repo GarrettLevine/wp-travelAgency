@@ -17,9 +17,11 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 		<article class="blogMain__blogPost" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 		<div class="blogMain__imageContainer">
-			<img src="<?php echo hackeryou_get_thumbnail_url($post) ?>" />
+			<img src="<?php echo hackeryou_get_thumbnail_url($post); ?>" />
 		</div>
+
 		<div class="blogMain__blogStats">
 			<p class="blogMain__blogDate"><?php the_date() ?></p>
 			<h2 class="blogMain__blogTitle">

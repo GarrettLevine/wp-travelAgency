@@ -1,0 +1,27 @@
+.searchPage {
+	&__wrapper {
+		@include outer-container($max-width--desktop);
+	}
+	&__heading {
+		@include span-columns(8);
+		h1, h2 {
+			color: $blog-grey;
+			font-family: $font-family--subtitle;
+			font-weight: 300;
+			font-size: 3.4rem;
+			text-transform: uppercase;
+			span {
+				margin-left: 1.5rem;
+				color: $blog-highlight;
+			}
+			p {
+				color: $secondary-color;
+				font-size: 2rem;
+				opacity: 0.8;
+			}
+		}
+	}
+	.sidebar {
+		@include span-columns(4);
+	}
+}

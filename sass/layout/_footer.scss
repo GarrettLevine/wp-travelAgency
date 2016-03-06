@@ -156,3 +156,14 @@
 		font-size: 1.5rem;
 	}
 }
+
+.recentcomments {
+	color: transparentize($white, 0.6);
+	line-height: 1.7; 
+	.comment-author-link {
+			color: transparentize($white, 0.6);
+		}
+		a {
+			color: $blog-highlight;
+		}
+}
