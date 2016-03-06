@@ -3,12 +3,22 @@
 		background-position: center;
 
 		&__wrapper {
-			height: 65vh;
+			height: 100vh;
 			@include outer-container($max-width--desktop);
+			@include mq(small) {
+				padding: 1rem;
+			}
+			@include mq(medium) {
+				padding: 1rem;
+			}
 		}
 
 		&__heroText {
 			margin-top: 15%;
+			@include mq(small) {
+				text-align: center;
+				margin-top: 10rem;
+			}
 			h6 {
 				margin: 0;
 				
@@ -28,11 +38,18 @@
 				width: 50%;
 				margin: 1rem 0 0 0;
 				text-transform: capitalize;
+				@include mq(small) {
+					font-size: 4rem;
+					width: 100%;
+				 margin-top: 1.5rem;
+				}
 			}
 		} // /.heroText
 		&__heroVideo {
 			display: flex;
-
+			@include mq(small) {
+				display: none;
+			}
 		}
 		//PLAY BUTTON
 		&__playButton {

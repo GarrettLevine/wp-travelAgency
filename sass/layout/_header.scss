@@ -6,6 +6,10 @@
 
 	&__logo {
 			@include span-columns(4);
+			@include mq(small) {
+				@include span-columns(12);
+				text-align: center;
+			}
 			h1 {
 				margin: 1rem 0 0 0;
 				letter-spacing: 0.46rem;
@@ -24,6 +28,10 @@
 		@include span-columns(6);
 		display: flex;
 		justify-content: space-between;
+		@include mq(small) {
+			@include shift(0);
+			@include span-columns(12);
+		}
 	}
 	//container for the nav links
 	&__navContainer {
@@ -31,19 +39,34 @@
 		display: flex;
 		justify-content: space-between;
 		margin: 0;
+		padding: 0 1.5rem;
+		@include mq(medium) {
+			width: 65%;
+			margin: auto;
+			justify-content: space-around;
+		}
+		@include mq(small){
+			width: 100%;
+		}
 		li {
 			font-size: 1.1rem;
 			text-transform: uppercase;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			@include mq(small) {
+				width: 33%;
+			}
 			a {
 				font-family: $font-family--body;
 				color: $white;
 				display: block;
 				padding: 1.5rem;
+				@include mq(small) {
+					font-size: 1.6rem;
+				}
 				&:hover {
-					background-color: transparentize($white, 0.7);
+					color: lighten($blog-highlight, 20%);
 				}
 			}
 		}
@@ -54,6 +77,9 @@
 		width: 30%;
 		position: relative;
 		margin: 0;
+		@include mq(small) {
+			display: none;
+		}
 		&:hover > input[type="search"] {
 			display: block;
 		}
@@ -123,4 +149,7 @@
 .insideNav form,
 .insideNav form input[type="submit"] {
 	background-color: $secondary-color;
+	li {
+		list-style: none;
+	}
 }

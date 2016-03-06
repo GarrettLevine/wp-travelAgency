@@ -1,18 +1,31 @@
 .page {
 	&__wrapper {
 		@include outer-container($max-width--desktop);
+
+		@include mq(medium) {
+			padding: 1rem;
+		}
+		@include mq(small) {
+			padding: 1rem;
+		}
 	}
 	&__title {
 		color: $white;
 		font-size: 7rem;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+	&__pageContent,
+	&__pageMembers {
+		@include row();
 	}
 	&__imageWrapper {
-		padding: 13rem 0;
+		padding: 9rem 0;
 		background-size: cover;
 		background-attachment: fixed;
 		background-repeat: none;
 	}
-	&__headerWrappeR {
+	&__headerWrapper {
 	 @include outer-container($max-width--desktop);
 	}
 	p {
@@ -25,5 +38,16 @@
 		background-color: $tertiary-color;
 		padding: 1.5rem;
 		border-left: 3px solid darken($tertiary-color, 20%);
+	}
+	&__members {
+		@include row();
+		padding-bottom: 6rem;
+	}
+	&__memberCard {
+		@include span-columns(4);
+		
+		@include mq(small) {
+			@include span-columns(12);
+		}
 	}
 }

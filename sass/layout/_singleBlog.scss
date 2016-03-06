@@ -16,8 +16,6 @@
 		letter-spacing: 0.1rem;
 		line-height: 1.5;
 		border-bottom: 1px solid $blog-grey;
-	}
-
 	blockquote {
 		background-color: $tertiary-color;
 		margin: 3rem 0;
@@ -36,5 +34,7 @@
 	li {
 		list-style-type: disc;
 	}
+	}
+
 }
 

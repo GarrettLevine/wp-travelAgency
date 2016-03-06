@@ -6,11 +6,21 @@
 
 	&__wrapper {
 		@include outer-container($max-width--desktop);
+		@include mq(medium) {
+			padding: 1rem;
+		}
+		@include mq(small) {
+			padding: 1rem;
+		}
 	}
 	&__textContainer {
 		@include span-columns(6);
 		text-align: center;
 		padding: 15rem 0;
+
+		@include mq(small) {
+			@include span-columns(12);
+		}
 		h2 {
 			font-family: $font-family--subtitle;
 			text-transform: uppercase;
@@ -37,6 +47,9 @@
 	}
 	&__instagramFeedContainer {
 		@include span-columns(6);
+		@include mq(small) {
+			display: none;
+		}
 	.wdi_feed_container {
 		background-color: $tertiary-color;
 		padding: 1rem;

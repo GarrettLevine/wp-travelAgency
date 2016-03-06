@@ -1,0 +1,32 @@
+.memberCard {
+	&__imageContainer {
+		height: 25rem;
+		overflow:hidden;
+		img {
+			width: 100%;
+		}
+		@include mq(small) {
+			height: 45rem;
+		}
+	}
+	&__textContainer {
+		text-align: center;
+	}
+	&__name {
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+	&__title {
+		text-transform: uppercase;
+		font-weight: 300;
+		color: $blog-grey;
+		font-size: 1rem;
+		margin-top:0.3rem;
+	}
+	&__description {
+		line-height: 2;
+		font-size: 1.3rem;
+		color: $blog-grey;
+	}
+}

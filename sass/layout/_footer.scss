@@ -3,6 +3,13 @@
 	padding: 7.2rem 0;
 	&__wrapper {
 		@include outer-container($max-width--desktop);
+		@include mq(small) {
+			padding: 1rem;
+		}
+
+		@include mq(medium) {
+			padding:1rem;
+		}
 		h3 {
 			color: $white;
 			font-family: $font-family--body;
@@ -31,10 +38,18 @@
 		}
 		.widget {
 			@include span-columns(3);
+			@include mq(small){
+				@include span-columns(12);
+				margin-bottom: 3rem;
+			}
 		}
 	}
 	&__logoContainer {
 		@include span-columns(3);
+		@include mq(small){
+			@include span-columns(12);
+			margin-bottom: 3rem;
+		}
 	}
 	&__footer {
 
@@ -88,6 +103,12 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@include mq(small) {
+			padding: 1rem;
+		}
+		@include mq(medium) {
+			padding:1rem;
+		}
 	}
 	//media button styles
 

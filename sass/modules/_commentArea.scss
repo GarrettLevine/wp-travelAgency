@@ -87,7 +87,7 @@
 		font-family: $font-family--body;
 		color: lighten($blog-grey, 10%);
 		@include mq(small) {
-			margin-left: 2.5rem;
+			margin-left: 4rem;
 		}
 }
 }
@@ -138,6 +138,9 @@
 			background-color: $blog-highlight;
 			color: $white;
 			border: 3px solid transparent;
+			&:focus {
+				outline: none;
+			}
 			&:hover {
 				background-color: $white;
 				border: 3px solid $blog-highlight;
