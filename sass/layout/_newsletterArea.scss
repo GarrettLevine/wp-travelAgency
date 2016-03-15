@@ -72,7 +72,7 @@
 		font-size: 1.5rem;
 		font-family: $font-family--subtitle;
 		text-transform: uppercase;
-
+		letter-spacing: 0.1rem;
 		text-align: center;
 		color: $white;
 		background-color: $secondary-color;
@@ -80,7 +80,7 @@
 		transition: all 0.5s;
 		cursor: pointer;
 		&:hover{
-			background-color: $primary-color;
+			background-color: $blog-highlight;
 		}
 	}
 

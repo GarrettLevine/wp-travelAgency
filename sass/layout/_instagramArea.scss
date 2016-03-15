@@ -28,6 +28,9 @@
 			font-size: 4.3rem;
 			margin: 0;
 			letter-spacing: 1rem;
+			@include mq(small) {
+				font-size: 3rem;
+			}
 		}
 		h4 {
 			font-family: $font-family--header;
@@ -53,6 +56,7 @@
 	.wdi_feed_container {
 		background-color: $tertiary-color;
 		padding: 1rem;
+		margin-top: 12%;
 	}
 	.wdi_pagination_container {
 		display: none;

@@ -23,6 +23,9 @@
 		margin: auto;
 		width: 50%;
 		text-align: center;
+		@include mq(small) {
+			width: 100%;
+		}
 	}
 	&__heading {
 		font-size: 4.5rem;
@@ -32,13 +35,18 @@
 		font-family: $font-family--subtitle;
 		font-weight: 400;
 		letter-spacing: 0.3rem;
+		@include mq(small) {
+			font-size: 3rem;
+		}
 	}
-	&__description {
+	&__subHeading {
 		color: $white;
 		font-family: $font-family--body;
 		font-size: 1.5rem;
-		font-weight: 300;
 		letter-spacing: 0.15rem;
+		@include mq(small) {
+			font-size: 1.3rem;
+		}
 	}
 	&__blogLink {
 		display: inline-block;
@@ -53,8 +61,14 @@
 		text-transform: uppercase;
 		letter-spacing: 0.2rem;
 		font-family: $font-family--body;
+		transition: all 0.5s;
 		&:visited {
 			color: $white;
+		}
+		&:hover {
+			background-color: $white;
+			color: $blog-highlight;
+			font-weight: 700;
 		}
 	}
 }

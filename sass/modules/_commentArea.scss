@@ -17,6 +17,17 @@
 	align-items: flex-start;
 	order: 0;
 }
+
+.comment-list {
+	@include mq(small) {
+		padding: 0;
+	}
+	.children {
+		@include mq(small) {
+			padding-left: 1rem;
+		}
+	}
+}
 .comment-author {
 			position: relative;
 			display: flex;

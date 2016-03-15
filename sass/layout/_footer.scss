@@ -28,7 +28,6 @@
 		}
 
 	} // ./wrapper
-
 	&__areaContainer {
 		margin:0;
 		padding: 0;
@@ -51,9 +50,6 @@
 			margin-bottom: 3rem;
 		}
 	}
-	&__footer {
-
-	}
 	.widget_recent_entries {
 		ul {
 			display: flex;
@@ -73,7 +69,7 @@
 
 					&:hover,
 					&:hover + .post-date {
-						background-color: $border-grey;
+						color: $blog-highlight;
 					}
 
 					&::after {
@@ -175,6 +171,9 @@
 	&__copyright {
 		color: $border-grey;
 		font-size: 1.5rem;
+		@include mq(small) {
+			font-size: 0.6rem;
+		}
 	}
 }
 

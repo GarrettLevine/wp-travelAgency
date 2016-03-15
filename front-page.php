@@ -13,7 +13,7 @@
 				<button class="heroImage__playButton">
 				</button>
 			<div class="heroImage__videoDescription">
-					<p><?php the_field('video_description'); ?></p>
+					<p class="videoText"><?php the_field('video_description'); ?></p>
 			</div>
   </div> <!-- /.container -->
 </div> <!-- /.wrapper -->

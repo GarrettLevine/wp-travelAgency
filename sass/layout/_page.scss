@@ -14,6 +14,9 @@
 		font-size: 7rem;
 		text-transform: uppercase;
 		font-weight: 300;
+		@include mq(small) {
+			margin-left: 3rem;
+		}
 	}
 	&__pageContent,
 	&__pageMembers {
@@ -48,6 +51,19 @@
 		
 		@include mq(small) {
 			@include span-columns(12);
+		}
+	}
+}
+
+.memberCard {
+	&__imageContainer {
+		@include mq(small) {
+			height: 30rem;
+		}
+		img {
+			width: 100%;
+			@include mq(small) {
+			}
 		}
 	}
 }
